@@ -383,6 +383,41 @@ body {
 
 /* --- RESPONSIVE HELPERS --- */
 /* Adjustments for different screen sizes */
+/* some edit to phone media */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .header .links {
+        position: absolute;
+        top: 65px;
+        right: 10px;
+        background: white;
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        
+        display: none; /* hidden by default */
+    }
+
+    .header .links.active {
+        display: flex;
+    }
+}
 
 /* Small devices (mobile) */
 @media (max-width: 575px) {
@@ -818,4 +853,5 @@ body {
     opacity: 0.7;
 }
 /* end footer */
+
 
