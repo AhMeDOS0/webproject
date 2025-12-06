@@ -1,17 +1,6 @@
  
 
 document.addEventListener("DOMContentLoaded", () => {
-  // botton for phone
-    const toggleBtn = document.querySelector(".menu-toggle");
-    const navMenu = document.getElementById("nav-menu");
-
-    if (toggleBtn && navMenu) {
-        toggleBtn.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-        });
-    }
-
-
   // --- Search Functionality ---
   // Allows users to search for text within the page content
   const searchInput = document.querySelector(".search");
@@ -239,3 +228,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
