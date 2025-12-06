@@ -458,11 +458,12 @@ body {
     }
 
     .landing .intro-text img {
-        top: 103px;
+            top: 103px;
             left: 27%;
             width: 311px;
             overflow: hidden;
             z-index: 100;
+            display:none;
     }
 
     .landing .intro-text .text {
@@ -533,6 +534,10 @@ body {
     .persona-controls {
         justify-content: center;
         width: 100%;
+    }
+
+    .news .h2 {
+        font-size:40;
     }
 }
 
@@ -813,3 +818,4 @@ body {
     opacity: 0.7;
 }
 /* end footer */
+
