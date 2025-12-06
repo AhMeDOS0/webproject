@@ -1,24 +1,33 @@
+/* --- VARIABLES --- */
+/* Define colors used throughout the site for consistency */
 :root {
-    --main-color: #146cad;
-    --sec-color: #2c4755;
-    --light-bg: #f6f6f6;
-    --text-dark: #2b2b2b;
+    --main-color: #146cad; /* Primary blue color */
+    --sec-color: #2c4755;  /* Secondary dark blue */
+    --light-bg: #f6f6f6;   /* Light gray background */
+    --text-dark: #2b2b2b;  /* Dark text color */
 }
 
+/* --- GLOBAL RULES --- */
+/* Reset box-sizing to include padding/border in element's total width/height */
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
+/* Base body styles */
 body {
     font-family: "Work Sans", sans-serif;
     color: var(--text-dark);
     margin: 0;
     background: #fff;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; /* Smoother fonts on WebKit browsers */
 }
 
+/* --- ANIMATIONS --- */
+/* Keyframes define the animation steps */
+
+/* Fade In Up: Element starts invisible and lower, then moves up and appears */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -30,6 +39,7 @@ body {
     }
 }
 
+/* Slide In Left: Element starts off-screen to the left */
 @keyframes slideInLeft {
     from {
         opacity: 0;
@@ -41,6 +51,7 @@ body {
     }
 }
 
+/* Slide In Right: Element starts off-screen to the right */
 @keyframes slideInRight {
     from {
         opacity: 0;
@@ -52,17 +63,20 @@ body {
     }
 }
 
+/* Base class for animated elements */
 .animate-on-scroll {
-    opacity: 0;
-    transition: opacity 1s ease-out, transform 1s ease-out;
-    will-change: opacity, transform;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition settings */
+    will-change: opacity, transform; /* Performance optimization */
 }
 
+/* Class added by JS when element enters viewport */
 .animate-on-scroll.is-visible {
     opacity: 1;
-    transform: none;
+    transform: none; /* Reset transform to original state */
 }
 
+/* Helper classes to define initial positions */
 .fade-up {
     transform: translateY(60px);
 }
@@ -75,24 +89,28 @@ body {
     transform: translateX(100px);
 }
 
+/* --- LAYOUT UTILITIES --- */
+/* Container: Centers content and sets max-width based on screen size */
 .container {
-    padding: 0 10px;
+    padding: 0px 10px;
     margin: 0 auto;
     max-width: 100%;
 }
 
+/* Responsive Container Widths */
 @media (min-width: 576px) { .container { width: 575px; } }
 @media (min-width: 768px) { .container { width: 750px; } }
 @media (min-width: 992px) { .container { width: 970px; } }
 @media (min-width: 1200px) { .container { width: 1170px; } }
 
+/* --- HEADER SECTION --- */
 .header {
     padding: 10px 0;
     background: #fff;
     border-bottom: 1px solid rgba(20, 108, 173, 0.06);
-    position: sticky;
+    position: sticky; /* Sticks to top of viewport */
     top: 0;
-    z-index: 40;
+    z-index: 40; /* Ensures header stays above other content */
 }
 
 .header a {
@@ -105,6 +123,7 @@ body {
     gap: 10px;
 }
 
+/* Logo Styles */
 .header .logo {
     display: flex;
     justify-content: flex-start;
@@ -126,6 +145,7 @@ body {
     margin: 0;
 }
 
+/* Search Bar Styles */
 .search-wrap {
     display: flex;
     align-items: center;
@@ -157,6 +177,7 @@ body {
     box-shadow: 0 0 6px rgba(20, 108, 173, 0.18);
 }
 
+/* Navigation Links */
 .header .links {
     margin-left: auto;
     display: flex;
@@ -177,11 +198,12 @@ body {
     color: #0b3f7a;
 }
 
+/* --- LANDING SECTION --- */
 .landing {
     background-image: url(../img/Blue\ and\ White\ Modern\ Medical\ Presentation\ Template.png);
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 105px);
+    height: calc(100vh - 105px); /* Full viewport height minus header */
     position: relative;
     display: flex;
     align-items: center;
@@ -230,6 +252,7 @@ body {
     line-height: 1.8;
 }
 
+/* --- INFO SECTION --- */
 .info {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -238,7 +261,7 @@ body {
 
 .info .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
     gap: 40px;
     max-width: 1300px;
     margin: 0 auto;
@@ -264,6 +287,7 @@ body {
     background: transparent;
 }
 
+/* --- PERSONA SECTION (Testimonial Slider) --- */
 .persona {
     padding: 60px 0;
     background: linear-gradient(120deg, #000000 0%, var(--main-color) 100%);
@@ -280,6 +304,7 @@ body {
     padding: 0 20px;
 }
 
+/* Left: Image */
 .persona-media {
     display: flex;
     align-items: center;
@@ -295,10 +320,10 @@ body {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
+/* Right: Content */
 .persona-content {
     max-width: 640px;
 }
-
 .persona-content h2 {
     font-size: 36px;
     margin: 0 0 20px 0;
@@ -317,6 +342,7 @@ body {
     margin-bottom: 24px;
 }
 
+/* Slider Controls */
 .persona-controls {
     display: flex;
     align-items: center;
@@ -352,9 +378,12 @@ body {
 }
 
 .dot.active {
-    background: #FFD166;
+    background: #FFD166; /* Active dot color */
 }
 
+/* --- RESPONSIVE HELPERS --- */
+/* Adjustments for different screen sizes */
+/* some edit to phone media */
 .menu-toggle {
     display: none;
     font-size: 28px;
@@ -364,6 +393,7 @@ body {
     cursor: pointer;
 }
 
+/* Mobile */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -374,15 +404,14 @@ body {
         position: absolute;
         top: 65px;
         right: 10px;
-        background: #ffffff;
+        background: white;
         flex-direction: column;
         gap: 12px;
         padding: 15px;
         border-radius: 8px;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        display: none;
-        margin-left: 0;
-        z-index: 50;
+        
+        display: none; /* hidden by default */
     }
 
     .header .links.active {
@@ -390,13 +419,15 @@ body {
     }
 }
 
+/* Small devices (mobile) */
 @media (max-width: 575px) {
+    /* ... (Mobile specific styles) ... */
     .container {
         padding: 0 12px;
         width: 100% !important;
         max-width: 100% !important;
     }
-
+    /* ... (Rest of mobile styles) ... */
     .header .container {
         flex-direction: column;
         align-items: flex-start;
@@ -438,9 +469,13 @@ body {
         font-size: 16px;
     }
 
+    /* links: wrap */
     .header .links {
+        margin-left: 0;
         width: 100%;
+        display: flex;
         flex-wrap: wrap;
+        gap: 8px;
         justify-content: flex-start;
     }
 
@@ -450,6 +485,7 @@ body {
         padding: 6px 8px;
     }
 
+    /* Landing adjustments */
     .landing {
         height: auto;
         padding: 40px 0 60px;
@@ -457,12 +493,12 @@ body {
     }
 
     .landing .intro-text img {
-        top: 103px;
-        left: 27%;
-        width: 311px;
-        overflow: hidden;
-        z-index: 100;
-        display: none;
+            top: 103px;
+            left: 27%;
+            width: 311px;
+            overflow: hidden;
+            z-index: 100;
+            display:none;
     }
 
     .landing .intro-text .text {
@@ -483,6 +519,7 @@ body {
         line-height: 1.6;
     }
 
+    /* Info: single column for mobile */
     .info .container {
         grid-template-columns: 1fr !important;
         gap: 20px;
@@ -503,6 +540,7 @@ body {
         line-height: 1.6;
     }
 
+    /* Persona: stack vertically with image on top */
     .persona-inner {
         grid-template-columns: 1fr;
         gap: 18px;
@@ -532,9 +570,15 @@ body {
         justify-content: center;
         width: 100%;
     }
+
+    .news .h2 {
+        font-size:40;
+    }
 }
 
+/* Medium devices (tablets) */
 @media (min-width: 576px) and (max-width: 991px) {
+    /* ... (Tablet specific styles) ... */
     .container {
         padding: 0 16px;
     }
@@ -566,6 +610,7 @@ body {
         font-size: 17px;
     }
 
+    /* Landing adjustments */
     .landing .intro-text .text {
         left: 50%;
         top: 45%;
@@ -576,10 +621,11 @@ body {
 
     .landing .intro-text img {
         top: 178px;
-        left: 23%;
-        width: 533px;
+            left: 23%;
+            width: 533px;
     }
 
+    /* Info: 2 columns when enough width */
     .info .container {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 28px;
@@ -594,6 +640,7 @@ body {
         font-size: 15px;
     }
 
+    /* Persona: still two columns but reduce gap */
     .persona-inner {
         grid-template-columns: 1fr 1fr;
         gap: 28px;
@@ -608,7 +655,9 @@ body {
     }
 }
 
+/* Large devices (desktops) */
 @media (min-width: 992px) {
+    /* ... (Desktop specific styles) ... */
     .container {
         padding: 0 20px;
     }
@@ -673,6 +722,7 @@ body {
     }
 }
 
+/* Extra large screens */
 @media (min-width: 1400px) {
     .container {
         max-width: 1400px;
@@ -696,6 +746,7 @@ body {
     }
 }
 
+/* --- NEWS SECTION --- */
 .news {
     background-color: #f6f6f6;
 }
@@ -712,13 +763,13 @@ body {
     height: 200px;
 }
 
-.news .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 20px;
+.news .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 20px;
 }
 
 .news h2 {
@@ -726,19 +777,18 @@ body {
     font-weight: 800;
 }
 
-.news .container h3 {
+.news .container h3{
     color: var(--main-color);
     font-size: 20px;
     font-weight: 600;
 }
 
-.news .container p {
+.news .container p{
     line-height: 1.7;
 }
 
-.news span,
-.read-more-btn,
-.read-less-btn {
+/* Read More/Less Button Styles */
+.news span, .read-more-btn, .read-less-btn {
     color: var(--main-color);
     font-size: 15px;
     font-weight: 600;
@@ -746,13 +796,12 @@ body {
     transition: color 0.3s;
 }
 
-.news span:hover,
-.read-more-btn:hover,
-.read-less-btn:hover {
+.news span:hover, .read-more-btn:hover, .read-less-btn:hover {
     color: #0b3f7a;
     text-decoration: underline;
 }
 
+/* --- FOOTER SECTION --- */
 .footer {
     background: linear-gradient(120deg, #000000 0%, var(--main-color) 100%);
     padding: 20px 0;
@@ -803,3 +852,4 @@ body {
 .footer .social i:hover {
     opacity: 0.7;
 }
+/* end footer */
