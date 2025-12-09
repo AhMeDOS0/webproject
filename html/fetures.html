@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetures</title>
+<!-- Font Awesome for logo icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  flex-direction: column; 
+ 
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: white;
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: left;
+  
+ 
+}
+
+.navbar span, 
+.navbar input, 
+.navbar button, 
+.navbar a, 
+.navbar .logo {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 10px;
+
+}
+
+.navbar input.search-input {
+  padding: 6px 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #0074C4;
+  margin-left: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color:#0074C4;
+  font-size: 16px;
+  margin-left: 15px;
+  font-weight:bold;
+}
+
+.navbar a:hover {
+  color: #6237d9;
+  
+}
+
+/* Logo */
+.home-link {
+    text-decoration: none;
+    color: #0074C4;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+   
+}
+
+.logo i {
+    margin-right: 10px;
+    font-size: 2rem;
+   
+} 
+/* Footer */
+.footer {
+  background: linear-gradient(120deg, #1f1c41 0%, #2765ac 100%);
+  padding: 20px 0;
+  width: 100%;
+}
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.footer .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer .logo i {
+    font-size: 28px;
+    color: #0074C4;
+}
+
+.footer .logo p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0074C4;
+    margin: 0;
+}
+
+.footer .social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer .social i {
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer .social i:hover {
+    opacity: 0.7;
+}
+
+/* start features */
+.features {
+    background-color: #f6f6f6;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+/* */
+.features {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/011/635/828/original/abstract-medicine-concept-capsule-3d-treatment-modern-technology-medical-on-blue-background-image-for-wallpaper-vector.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+/*  */
+.features h1 {
+    margin: 0;
+    padding: 40px 60px 30px;
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--main-color);
+}
+
+.features p {
+    padding: 0 60px 40px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-dark);
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.features .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.features .card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+.features .card h3 {
+    margin: 18px 0 10px;
+    color: var(--main-color);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.features .card p {
+    line-height: 1.6;
+    color: #555;
+    padding: 0;
+}
+
+.footer {
+    margin-top: 60px; 
+}
+
+
+
+.features .card {
+    min-height: 420px;
+}
+/* end features */
+
+/* start animation */
+
+/* Animation Keyframes */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to each card */
+.features .card {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* Delay for each card (تسلسل جميل) */
+.features .card:nth-child(1) { animation-delay: 0.1s; }
+.features .card:nth-child(2) { animation-delay: 0.2s; }
+.features .card:nth-child(3) { animation-delay: 0.3s; }
+.features .card:nth-child(4) { animation-delay: 0.4s; }
+.features .card:nth-child(5) { animation-delay: 0.5s; }
+.features .card:nth-child(6) { animation-delay: 0.6s; }
+
+
+
+/* end animation */
+
+
+    </style>
+</head>
+<body>
+    <!-- start Navbar -->
+    <div class="navbar">
+        
+            <a href="/projectweb/project.html" class="home-link">
+                <div class="logo">
+                    <i class="fa-solid fa-capsules"></i>
+                    <p>Cabsulty</p>
+                </div>
+            </a>
+
+           <input type="text" placeholder="Search" class="search-input">
+
+  <a href="" style="margin-left: 180px;">About</a>
+  <a href="">Features</a>
+  <a href="">How It Works</a>
+  <a href="" onclick="location.reload(); return false;">Download App</a>
+  <a href="">Contact Us</a>
+
+           
+            </div>
+        </div>
+    </div>
+
+       
+   <br>
+    <div class="features">
+        <h1 style="text-transform: capitalize;">Key Features of a Medication Reminder Application</h1>
+        <p>A medication reminder application plays an essential role in improving treatment adherence, enhancing patient safety, and reducing the risks linked to missed or incorrect doses. Modern healthcare studies show that many individuals struggle to follow their medication schedules consistently, which can lead to poor health outcomes or ineffective treatment. A well-designed reminder app addresses these problems by offering smart features that support users in managing their medicines easily and confidently.
+    Reliable sources such as the World Health Organization (WHO) highlight that medication adherence is one of the most critical factors influencing treatment success, and digital tools are proven to help improve this behavior (WHO, 2023)
+    Source: <a href="https://www.who.int/news-room/fact-sheets/detail/medication-adherence">Source</a>
+    </p>
+        
+        <div class="container">
+            <div class="card">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.3KqCXI1XwTSBVbsSVVchUQHaGx?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                <h3>1.Smart Medication Reminders </h3>
+                <p> The core function of the app is to send accurate, timely reminders for all m
+       edications. Users can schedule reminders based on time, frequency, and dosage instructions.
+       Smart alerts help prevent missed doses, double-dosing, and long gaps between doses, which
+       are all major contributors to non-adherence Research from the CDC
+       (Centers for Disease Control and Prevention) shows that digital
+       reminders significantly improve medication routine consistency.
+            </div>
+            <div class="card">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.-HG2oFjn_iF4ajiogizSjwHaFj?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                <h3>2. Personalized Medication Schedules</h3>
+                <p>Each individual follows a unique treatment plan. The app allows users to 
+                    create personalized schedules suited to their prescriptions,
+                     including daily, weekly, or conditional medications. 
+                     Users can also enter specific instructions such as “take with food” or 
+                     “avoid before bedtime,” ensuring more accurate and safe medication use.
+            </div>
+            <div class="card">
+                <img src="https://th.bing.com/th/id/R.1e08f9a1c89e2a1897e4e247fdedcca0?rik=5sUCeQqCKm9zIQ&pid=ImgRaw&r=0" alt="">
+                <h3>3. User-Friendly Interface</h3>
+                <p>A medication reminder app must be simple to use for all age groups. 
+                    Large buttons, clear icons, readable fonts, and intuitive navigation make 
+                    the experience comfortable for children, adults, and seniors.
+             Accessibility features like voice assistance and dark mode improve usability even more.
+
+
+            </div>            
+            
+            <div class="card">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.6FP9G1ZFEuTooE9eWefocQHaH6?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                <h3>4. Health Tracking & Progress Monitoring</h3>
+                <p>A visual dashboard allows users to track their adherence progress, 
+                    completion rates, and historical intake records. 
+                    Charts and logs help individuals and their healthcare providers evaluate how closely the treatment plan is followed. 
+                    Studies published in the National Institutes of Health (NIH) confirm that progress tracking improves motivation and consistency in medication adherence.
+                </div>            
+                <div class="card">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.JLJE_ljx3km0xy7uAb7V9wHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                    <h3>5. Multi-Medication Management</h3>
+                    <p>Many patients take several medications daily. 
+                        The app supports managing multiple drugs at once, organizing them by type, time, or purpose.
+                        This feature is especially helpful for older adults or individuals with chronic conditions who rely on complex treatment plans.
+                        
+                    </div>            
+                    
+                 <div class="card">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.i0eh0levQFIMhJc1Pxor1wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                        <h3> 6. Multi-Language Support</h3>
+                        <p>To ensure accessibility for global users, 
+                            the application should support several languages. 
+                            This helps people understand their medication instructions clearly, 
+                            reducing chances of misunderstanding or misuse.
+          
+           <br>
+           
+           <!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <a href="/projectweb/html/home.html" class="home-link">
+            <div class="logo">
+                <i class="fa-solid fa-capsules"></i>
+                <p>capsulty</p>
+            </div>
+        </a>
+
+        <div class="social">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-discord"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-facebook"></i>
+</div>
+                    </div>            
+                </div>
+      </div>
+      
+     <!-- end latest -->
+
+</body>
+</html>
