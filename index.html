@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capsulty - Project</title>
+
+    <!-- Main CSS files: normalize.css for browser consistency, project.css for custom styles -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/project.css">
+
+    <!-- Icons library (FontAwesome) -->
+    <link rel="stylesheet" href="../css/all.min.css">
+
+    <!-- Google Fonts: Work Sans font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Main JavaScript file: Handles search, animations, and slider logic -->
+    <script defer src="..//js/project.js"></script>
+</head>
+
+<body>
+    <!-- Start Header Section: Contains Logo, Search Bar, and Navigation Links -->
+    <div class="header">
+        <div class="container">
+            <!-- Logo linking back to home -->
+            <a href="index.html" class="home-link">
+                <div class="logo">
+                    <i class="fa-solid fa-capsules"></i>
+                    <p>capsulty</p>
+                </div>
+            </a>
+            
+            <!-- Search Bar: Users can type here to find content on the page -->
+            <div class="search-wrap">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <form action="" class="search-form" aria-label="Site search">
+                    <input class="search" type="search" placeholder="Search" />
+                </form>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="links" role="navigation" aria-label="Main links">
+                <a href="about.html">About</a>
+                <a href="features.html">Features</a>
+                <a href="Medication-Schedule.html">Medication Schedule</a>
+                <a href="download.html">Download App</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start Landing Section: The main hero area with image and welcome text -->
+    <!-- 'animate-on-scroll' class triggers the animation when this section appears -->
+    <div class="landing" role="banner" aria-label="Landing">
+        <div class="intro-text">
+            <!-- Image slides in from the right -->
+            <img src="../img/Omnichannel_forwebsite-850x550-1.webp" alt="Hero illustration" class="animate-on-scroll slide-right" />
+            <!-- Text slides in from the left -->
+            <div class="text animate-on-scroll slide-left">
+                <h1>Hello There</h1>
+                <p style="text-transform: capitalize;">we are capsulty your reminder for your medicine</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Landing -->
+
+    <!-- Start Info Section: Three cards highlighting key features -->
+    <div class="info" aria-labelledby="info-title">
+        <div class="container">
+            <!-- Card 1: Behavioral AI -->
+            <div class="card1 animate-on-scroll fade-up">
+                <img src="../img/Innovation_icon.webp" alt="Innovation icon" />
+                <h2>Behavioral AI</h2>
+                <p>Capsulty revolutionizes medication engagement through advanced technology to meet patients' needs.
+                </p>
+            </div>
+
+            <!-- Card 2: Validated (with slight delay for staggered animation) -->
+            <div class="card1 animate-on-scroll fade-up" style="transition-delay: 0.1s;">
+                <img src="../img/Personalized_icon.webp" alt="Personalized icon" />
+                <h2>Validated</h2>
+                <p>Capsulty delivers proven guidance to increase adherence and extend persistence.</p>
+            </div>
+
+            <!-- Card 3: Personalized (with more delay) -->
+            <div class="card1 animate-on-scroll fade-up" style="transition-delay: 0.2s;">
+                <img src="../img/PROVEN_ICON.webp" alt="Proven icon" />
+                <h2>Personalized</h2>
+                <p>Capsulty's patient-centric approach is at the center of everything we do.</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Info -->
+
+    <!-- Start Persona Section: Testimonial slider -->
+    <div class="persona" aria-labelledby="persona-title">
+        <div class="container persona-inner animate-on-scroll fade-up">
+            <!-- Left side: User Image (ID used by JS to update image) -->
+            <div class="persona-media">
+                <img src="../img/2020_8_18_12_3_36_873.jpg" alt="Makeba and Son" id="persona-img" />
+            </div>
+
+            <!-- Right side: User Quote and Details (IDs used by JS to update text) -->
+            <div class="persona-content">
+                <h2 id="persona-title">Eight Different Prescriptions</h2>
+                <p class="persona-quote" id="persona-quote">"He was given eight different prescriptions upon release from the hospital and
+                    it was very overwhelming to me. So I came across Medisafe and it was the best thing that could ever
+                    have happened because I don't know how I would have managed."</p>
+                <p class="persona-meta" id="persona-meta"><strong>Makeba and Son</strong> | <em>Capsulty Since 2017</em></p>
+
+                <!-- Slider Controls: Previous/Next buttons and Dots -->
+                <div class="persona-controls">
+                    <button class="circle-arrow" id="prev-btn" aria-label="Previous">←</button>
+                    <div class="dots" id="dots-container">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                    <button class="circle-arrow" id="next-btn" aria-label="Next">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Persona -->
+
+     <!-- Start News Section: Latest updates with 'Read More' functionality -->
+      <div class="news">
+          <h2 style="text-transform: capitalize;" class="animate-on-scroll fade-up">the latest from capsulty</h2>
+        <div class="container">
+            <!-- News Card 1 -->
+            <div class="card animate-on-scroll fade-up">
+                <img src="../img/Omnichannel_forwebsite-850x550-1.webp" alt="">
+                <h3>Enhancing Multiple Sclerosis Patient Outcomes Through Digital Engagement</h3>
+                <p>Multiple Sclerosis (MS) represents a formidable challenge in healthcare, a chronic, often unpredictable disease of the
+            central nervous system that impacts ... <span class="read-more-btn">Read More</span></p>
+            </div>
+            <!-- News Card 2 -->
+            <div class="card animate-on-scroll fade-up" style="transition-delay: 0.1s;">
+                <img src="../img/weight_loss-1024x576-landscape-4300f3f1e6adf43239fe78a814204a07-.jpg" alt="">
+                <h3>Boosting Diabetes Adherence: Capsulty Digital Tools Deliver Results</h3>
+                <p>Summary Managing diabetes presents significant challenges both for patients and pharmaceutical companies. Adherence to
+            medication regimens, continuous mon... <span class="read-more-btn">Read More</span></p>
+            </div>
+            <!-- News Card 3 -->
+            <div class="card animate-on-scroll fade-up" style="transition-delay: 0.2s;">
+                <img src="../img/download.jpeg" alt="">
+                <h3>High-Stakes GLP-1s: Where Digital Reinforcement Becomes Mission-Critical</h3>
+                <p>Today's groundbreaking announcement from Novo Nordisk and Eli Lilly to reduce the cost of their blockbuster weight loss
+            drugs in the U.S. is already sendin... <span class="read-more-btn">Read More</span></p>
+            </div>
+            
+        </div>
+      </div>
+     <!-- End News -->
+
+      <!-- Start Footer: Links and Social Media -->
+    <div class="footer">
+        <div class="container">
+    
+            <a href="index.html" class="home-link">
+                <div class="logo">
+                    <i class="fa-solid fa-capsules"></i>
+                    <p>capsulty</p>
+                </div>
+            </a>
+    
+            <div class="social">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+    
+        </div>
+    </div>
+       <!-- End Footer -->
+
+</body>
+
+</html>
