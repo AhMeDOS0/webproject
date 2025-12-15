@@ -141,14 +141,14 @@ document.addEventListener("DOMContentLoaded", () => {
         meta: "<strong>Makeba and Son</strong> | <em>Capsulty Since 2017</em>",
       },
       {
-        img: "../img/Omnichannel_forwebsite-850x550-1.webp",
+        img: "../img/4.jpg",
         title: "Peace of Mind",
         quote:
           '"Capsulty has given me peace of mind knowing that my mother is taking her medications on time. The app is easy to use and the reminders are a lifesaver."',
         meta: "<strong>Sarah J.</strong> | <em>Capsulty Since 2019</em>",
       },
       {
-        img: "../img/Innovation_icon.webp",
+        img: "../img/2020_8_18_12_3_36_873.jpg",
         title: "Better Health Outcomes",
         quote:
           '"Since using Capsulty, my adherence to my medication regimen has improved significantly. I feel healthier and more in control of my condition."',
@@ -266,4 +266,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
+
   });
