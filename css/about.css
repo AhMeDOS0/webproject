@@ -1,0 +1,158 @@
+/* About section specific styles */
+
+/* About Section: Main container for the about page content */
+.about {
+    background-image: url(../img/global_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 0;
+    min-height: 600px;
+    height: auto;
+    /* Overlay for better text readability */
+    position: relative;
+    /* إضافة جديدة: تأثير حركة خفيفة (zoom) للخلفية */
+    animation: zoomBackground 10s ease-in-out infinite alternate;
+}
+
+/* Gradient overlay to match download page */
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(20, 108, 173, 0.8) 0%, rgba(44, 71, 85, 0.6) 100%);
+    z-index: 0;
+}
+
+/* تعريف الرسم المتحرك للخلفية (حركة خفيفة) */
+@keyframes zoomBackground {
+    from { background-size: cover; }
+    to { background-size: 110% cover; }
+}
+
+.about .container {
+    position: relative;
+    z-index: 1; /* Ensure content is above overlay */
+    width: 100%;
+    max-width: 1000px; /* Limit width for readability */
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.95); /* Add background to text for readability */
+    border-radius: 15px;
+    margin-top: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    font-family: "Work Sans", sans-serif;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--sec-color);
+    text-align: center;
+    font-weight: bold;
+    /* إضافة: تأثير fade-in للعنوان */
+    animation: fadeInText 2s ease-in-out;
+    /* إضافة جديدة: تأثير ارتداد (bounce-in) للعنوان */
+    animation: bounceInTitle 1.5s ease-out, fadeInText 2s ease-in-out;
+}
+
+/* تعريف الرسم المتحرك للارتداد في العنوان */
+@keyframes bounceInTitle {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.about p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.8;
+    color: var(--text-dark);
+    /* Add: Fade-in effect for paragraphs */
+    animation: fadeInText 2.5s ease-in-out;
+}
+
+.about ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.about li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #444;
+    /* Add: Fade-in effect for lists */
+    animation: fadeInText 3s ease-in-out;
+    /* New addition: Slide-in from left with staggered delay */
+    animation: slideInLeft 1s ease-out forwards;
+    opacity: 0; /* Start hidden */
+}
+
+/* Define slide-in animation from left */
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Add staggered delay for each list item */
+.about li:nth-child(1) { animation-delay: 0.5s; }
+.about li:nth-child(2) { animation-delay: 0.7s; }
+.about li:nth-child(3) { animation-delay: 0.9s; }
+.about li:nth-child(4) { animation-delay: 1.1s; }
+.about li:nth-child(5) { animation-delay: 1.3s; }
+
+.about strong {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+/* تعريف الرسم المتحرك للنصوص في قسم About */
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* زر العودة إلى الأعلى */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+#backToTop:hover {
+    transform: scale(1.1);
+    background-color: var(--sec-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about h1 {
+        font-size: 2rem;
+    }
+
+    .about p,
+    .about li {
+        font-size: 1rem;
+    }
+
+    .about .container {
+        padding: 20px;
+        width: 90%;
+    }
+}

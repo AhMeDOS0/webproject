@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medication Schedule - Capsulty</title>
+
+    <!-- Main CSS files -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/project.css">
+
+    <!-- Icons library (FontAwesome) -->
+    <link rel="stylesheet" href="../css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    
+    <!-- Page Specific CSS: Custom styles for the Medication Schedule page -->
+    <link rel="stylesheet" href="../css/Medication-Schedule.css">
+
+    <!-- Main JavaScript file -->
+    <script defer src="../js/project.js"></script>
+    <!-- Page Specific JavaScript -->
+    <script defer src="../js/Medication-Schedule.js"></script>
+</head>
+
+<body>
+    <!-- Start Header Section -->
+    <div class="header">
+        <div class="container">
+            <a href="../index.html" class="home-link">
+                <div class="logo">
+                    <i class="fa-solid fa-capsules"></i>
+                    <p>capsulty</p>
+                </div>
+            </a>
+            
+            <div class="search-wrap">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <form action="" class="search-form" aria-label="Site search">
+                    <input class="search" type="search" placeholder="Search" />
+                </form>
+            </div>
+
+            <div class="links" role="navigation" aria-label="Main links">
+                <a href="about.html">About</a>
+                <a href="features.html">Features</a>
+                <a href="Medication-Schedule.html">Medication Schedule</a>
+                <a href="download.html">Download App</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start Main Content -->
+    <div class="container-schedule" dir="rtl">
+        <h2 style="text-align:center;">Medication Schedule</h2>
+
+        <div class="card-schedule">
+            <h3>Add medication</h3>
+            <label>Medicine name</label>
+            <input id="medName" type="text">
+
+            <label>Dose time</label>
+            <input id="medTime" type="time">
+
+            <label>Date</label>
+            <input id="medDate" type="date">
+
+            <label>Alarm tone</label>
+            <select id="sound">
+                <option value="--">silent</option>
+                <option value="../music/tone1.mp3">Tone 1</option>
+                <option value="../music/tone2.mp3">Tone 2</option>
+                <option value="../music/tone3.mp3">Tone 3</option>
+            </select>
+
+            <button class="btn-schedule" onclick="addMedicine()">Add</button>
+        </div>
+
+        <div class="card-schedule">
+            <h3>Registered medicines</h3>
+            <div id="medList"></div>
+            <p>Total medications today: <span id="countToday">0</span></p>
+        </div>
+
+        <div class="card-schedule">
+            <h3>Check day</h3>
+            <input type="date" id="checkDate">
+            <button class="btn-schedule" onclick="checkByDate()">Display</button>
+            <div id="checkResult"></div>
+        </div>
+    </div>
+    <!-- End Main Content -->
+
+    <audio id="player"></audio>
+
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container">
+            <a href="../index.html" class="home-link">
+                <div class="logo">
+                    <i class="fa-solid fa-capsules"></i>
+                    <p>capsulty</p>
+                </div>
+            </a>
+            <div class="social">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+</body>
+</html>
