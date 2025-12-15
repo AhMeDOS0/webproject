@@ -54,16 +54,17 @@
 
 .side-image {
   position: absolute;
-  top: 0;
-  right: 100px;
-  height: 100%;     
-  width: 400px;    
-  object-fit: contain; 
-  transform: translateX(100%);
-  opacity: 0;
-  animation: slideInImage 1s forwards;
-  animation-delay: 0.8s;
-  z-index: 2;
+    top: 0;
+    right: 0px;
+    height: 100%;
+    width: 500px;
+    object-fit: cover;
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slideInImage 1s forwards;
+    animation-delay: 0.8s;
+    /* FONT-WEIGHT: 200; */
+    z-index: 2;
 }
 
 .download-btn {
@@ -114,4 +115,5 @@
         opacity: 0.2; /* Fade out image on smaller screens so text is readable */
         right: 0;
     }
+
 }
