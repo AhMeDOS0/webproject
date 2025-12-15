@@ -1,0 +1,116 @@
+/* Download Page Specific Styles */
+.download-section {
+  background: url('../img/WhatsApp\ Image\ 2025-12-03\ at\ 01.14.32_00b99b45.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 600px; /* Ensure visibility */
+  padding: 120px 40px;  
+  color: white;
+  position: relative; 
+  overflow: hidden;
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start; 
+  font-family: "Work Sans", sans-serif;
+}
+
+/* Gradient Overlay for better text readability and premium look */
+.download-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(20, 108, 173, 0.8) 0%, rgba(44, 71, 85, 0.6) 100%);
+    z-index: 1;
+}
+
+.text-box {
+  max-width: 600px;
+  font-size: 22px;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeSlideIn 1s forwards;
+  animation-delay: 0.5s;
+  z-index: 2; /* Ensure text is above background */
+  position: relative;
+}
+
+/* Ensure h1 and p inherit color white */
+.text-box h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+.text-box p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.side-image {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  height: 100%;     
+  width: 400px;    
+  object-fit: contain; 
+  transform: translateX(100%);
+  opacity: 0;
+  animation: slideInImage 1s forwards;
+  animation-delay: 0.8s;
+  z-index: 2;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 35px;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 20px;
+  border: 2px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideIn 1s forwards;
+  animation-delay: 1.2s;
+  font-weight: bold;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.download-btn:hover {
+  background-color: white;
+  color: var(--main-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Keyframes */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInImage {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .side-image {
+        opacity: 0.2; /* Fade out image on smaller screens so text is readable */
+        right: 0;
+    }
+}

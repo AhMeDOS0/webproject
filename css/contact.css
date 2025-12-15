@@ -1,0 +1,260 @@
+/* 1. تنسيقات عامة للصفحة */
+.contact-wrapper {
+    box-sizing: border-box; 
+    font-family: "Work Sans", sans-serif;
+    background-color: transparent; /* Changed from #f3f4f6 to transparent */
+    color: var(--text-dark);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 180px); /* Adjust for header/footer */
+}
+
+/* 2. تنسيق شريط المعلومات العلوي */
+.info-bar {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; 
+}
+
+.info-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    min-width: 250px; 
+    transition: 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+}
+
+.icon-circle {
+    background-color: #e0f2fe; 
+    color: var(--main-color); 
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+/* 3. الحاوية الرئيسية (النموذج والصورة) */
+.main-container {
+    background: white;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden; 
+    display: flex; 
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+/* القسم اليمين: النموذج */
+.form-section {
+    padding: 40px;
+    flex: 1; 
+    min-width: 300px;
+}
+
+.brand-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--sec-color);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* تنسيق حقول الإدخال */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.contact-wrapper label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--sec-color);
+    font-weight: 600;
+}
+
+.contact-wrapper input, 
+.contact-wrapper select, 
+.contact-wrapper textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-family: inherit;
+    outline: none; 
+    transition: 0.3s;
+}
+
+.contact-wrapper input:focus, 
+.contact-wrapper textarea:focus {
+    border-color: var(--main-color); 
+    box-shadow: 0 0 0 3px rgba(20, 108, 173, 0.1);
+}
+
+.btn-submit {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.btn-submit:hover {
+    background-color: var(--sec-color);
+    transform: translateY(-2px);
+}
+
+/* أيقونات السوشيال ميديا */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #9ca3af;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--main-color); 
+    transform: scale(1.1);
+}
+
+/* Left Section: Hero Image */
+.image-section {
+    flex: 1;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1000');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+/* Gradient Overlay: Adds a blue tint to the bottom of the image for style */
+.overlay {
+    background: linear-gradient(to top, rgba(30, 58, 138, 0.9), transparent);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+/* 4. قسم الأسئلة الشائعة */
+.faq-container {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px 20px;
+    background: white;
+    border: none;
+    text-align: right;
+    font-family: inherit;
+    font-weight: bold;
+    color: var(--sec-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0; 
+    overflow: hidden;
+    background-color: #f9fafb;
+    color: #6b7280;
+    font-size: 14px;
+    transition: 0.3s ease; 
+}
+
+.faq-answer.show {
+    padding: 15px 20px;
+    max-height: 200px; 
+}
+
+/* 5. زر الواتساب العائم */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #22c55e;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+.whatsapp-float:hover {
+    background-color: #16a34a;
+    transform: scale(1.1); 
+}
+
+/* جعل الصفحة متجاوبة مع الموبايل */
+@media (max-width: 768px) {
+    .image-section {
+        display: none; 
+    }
+    .info-bar {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,141 @@
+/* Features Page Specific Styles */
+
+.features-section {
+    background-image: url("../img/global_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    background-color: #f6f6f6; /* Fallback */
+    position: relative;
+    font-family: "Work Sans", sans-serif;
+}
+
+.features-section::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Dark Gradient Overlay */
+    /* Adds a blue-tinted gradient to ensure text readability on top of the global background */
+    background: linear-gradient(90deg, rgba(20, 108, 173, 0.8) 0%, rgba(44, 71, 85, 0.6) 100%);
+    z-index: 0;
+}
+
+.features-section h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto 20px;
+    padding: 0 20px;
+    font-size: 48px;
+    font-weight: 800;
+    color: white; /* Contrast against dark gradient */
+    text-align: center;
+    max-width: 1000px;
+}
+
+.features-section p.intro {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px 50px;
+    font-size: 18px; /* Slightly larger text */
+    line-height: 1.8;
+    color: white; /* Contrast against dark gradient */
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.features-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    min-height: 420px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.features-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    border-color: rgba(20, 108, 173, 0.2);
+}
+
+.features-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+.features-card h3 {
+    margin: 18px 0 10px;
+    color: var(--main-color);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.features-card p {
+    line-height: 1.6;
+    color: #555;
+    padding: 0;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay for each card */
+.features-card:nth-child(1) { animation-delay: 0.1s; }
+.features-card:nth-child(2) { animation-delay: 0.2s; }
+.features-card:nth-child(3) { animation-delay: 0.3s; }
+.features-card:nth-child(4) { animation-delay: 0.4s; }
+.features-card:nth-child(5) { animation-delay: 0.5s; }
+.features-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .features-section h1 {
+        font-size: 30px;
+        padding: 20px;
+    }
+    
+    .features-section p.intro {
+        padding: 0 20px 20px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}

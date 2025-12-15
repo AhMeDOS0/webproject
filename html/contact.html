@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- LTR for the main frame to support standard header -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Capsulty</title>
+
+    <!-- Main CSS files -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/project.css">
+
+    <!-- Icons library (FontAwesome) -->
+    <link rel="stylesheet" href="../css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Page Specific CSS: Styles for the contact form and FAQ section -->
+    <link rel="stylesheet" href="../css/contact.css">
+
+    <!-- Main JavaScript file -->
+    <script defer src="../js/project.js"></script>
+    <!-- Page Specific JavaScript -->
+    <script defer src="../js/contact.js"></script>
+</head>
+
+<body>
+    <!-- Start Header Section -->
+    <div class="header">
+        <div class="container">
+            <a href="index.html" class="home-link">
+                <div class="logo">
+                    <i class="fa-solid fa-capsules"></i>
+                    <p>capsulty</p>
+                </div>
+            </a>
+            
+            <div class="search-wrap">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <form action="" class="search-form" aria-label="Site search">
+                    <input class="search" type="search" placeholder="Search" />
+                </form>
+            </div>
+
+            <div class="links" role="navigation" aria-label="Main links">
+                <a href="about.html">About</a>
+                <a href="features.html">Features</a>
+                <a href="Medication-Schedule.html">Medication Schedule</a>
+                <a href="download.html">Download App</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start Main Contact Content (RTL) -->
+    <div class="contact-wrapper" dir="rtl">
+        <div class="info-bar">
+            <div class="info-box">
+                <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                    <p style="color: #6b7280; font-size: 12px; font-weight: bold;">Contact Us </p>
+                    <p dir="ltr" style="text-align: right;">+20 01229312516</p>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                    <p style="color: #6b7280; font-size: 12px; font-weight: bold;">Email </p>
+                    <p>support@capsulty.com</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                    <p style="color: #6b7280; font-size: 12px; font-weight: bold;">Our Location </p>
+                    <p> Alexandria , Egypt</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-container">
+            
+            <div class="form-section">
+                <div class="brand-title">
+                    <i class="fa-solid fa-capsules" style="color: #2563eb; font-size: 30px;"></i>
+                    <span>Capsulty</span>
+                </div>
+
+                <h2 style="margin-bottom: 10px;">  How Can I Help You </h2>
+                <p style="color: #6b7280; margin-bottom: 20px;">Our Team is Ready to Respond.</p>
+
+                <form onsubmit="sendMessage(event)">
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Write your Name here" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Phone Number </label>
+                        <input type="tel" placeholder="01xxxxxxxxx">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email </label>
+                        <input type="email" placeholder="example@email.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Inquiry Type </label>
+                        <select>
+                            <option>Technical Problem </option>
+                            <option>Inquiry about a Medication</option>
+                            <option>New proposal </option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Massage</label>
+                        <textarea rows="4" placeholder="Write your Details Here"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span>Send Massage </span>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </button>
+                </form>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="image-section">
+                <div class="overlay">
+                    <h3>Download The App Now</h3>
+                    <p style="margin-bottom: 15px; opacity: 0.9;">Available Now in all Stores </p>
+                    <button style="padding: 5px 10px; border-radius: 5px; border: none; cursor: pointer; font-weight: bold;">
+                        <i class="fa-brands fa-apple"></i> App Store
+                    </button>
+                    <button style="padding: 5px 10px; border-radius: 5px; border: none; cursor: pointer; font-weight: bold;">
+                        <i class="fa-brands fa-google-play"></i> Google Play
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-container">
+            <h3 style="text-align: center; margin-bottom: 20px; font-size: 24px;">Common Question</h3>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleAnswer(this)">
+                 How do I add an alarm to my Medication ?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    From the Home Page Cilck on the Icon (+) .
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleAnswer(this)">
+                    Is the App Free?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    Yse , The App is Completely Free for Personal Use.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Main Content -->
+
+    <a href="https://wa.me/201000000000" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container">
+            <a href="index.html" class="home-link">
+                <div class="logo">
+                    <i class="fa-solid fa-capsules"></i>
+                    <p>capsulty</p>
+                </div>
+            </a>
+            <div class="social">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+</body>
+</html>
